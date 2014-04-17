@@ -2,6 +2,9 @@
 * Fixed/improved feature
 - Removed feature
 
-16. April 2014 v0.0.1
+
+2014-04-17 v0.0.1
+=================
 
 + Initial release
+
