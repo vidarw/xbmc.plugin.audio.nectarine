@@ -53,12 +53,17 @@ try:
 except ImportError:
     import simplejson as json
 
+pluginConfig = SafeConfigParser()
+pluginConfig.read(os.path.join(os.path.dirname(__file__), "config.ini"))
+
 ARGS = urlparse.parse_qs(sys.argv[2][1:])
 BASE_URL = sys.argv[0]
 HANDLE = int(sys.argv[1])
+ADDON = xbmcaddon.Addon(id=pluginConfig.get('plugin', 'id'))
 STREAM_URL = 'https://www.scenemusic.net/demovibes/streams/'
 STREAM_URL_XML = 'https://www.scenemusic.net/demovibes/xml/streams/'
 QUEUE_URL_XML = 'https://www.scenemusic.net/demovibes/xml/queue/'
+
 
 class Main:
 
@@ -76,13 +81,13 @@ class Main:
 
             # Create streams directory
             url = self.build_url({'mode': 'folder', 'foldername': 'streams'})
-            li = xbmcgui.ListItem('Streams', iconImage='DefaultFolder.png')
+            li = xbmcgui.ListItem(ADDON.getLocalizedString(30100), iconImage='DefaultFolder.png')
             xbmcplugin.addDirectoryItem(handle=HANDLE, url=url, listitem=li, isFolder=True)
             xbmcplugin.endOfDirectory(HANDLE)
 
             # Create queue directory
             url = self.build_url({'mode': 'folder', 'foldername': 'queue'})
-            li = xbmcgui.ListItem('Queue', iconImage='DefaultFolder.png')
+            li = xbmcgui.ListItem(ADDON.getLocalizedString(30101), iconImage='DefaultFolder.png')
             xbmcplugin.addDirectoryItem(handle=HANDLE, url=url, listitem=li, isFolder=True)
             xbmcplugin.endOfDirectory(HANDLE)
 
@@ -102,24 +107,23 @@ class Main:
             queue = self.get_queue()
 
             # Currently Playing
+            self.add_heading(ADDON.getLocalizedString(30200))
             for item in queue[0]:
                 li = xbmcgui.ListItem(item["artist"] + " - " + item["song"], iconImage='DefaultAudio.png')
                 li.setProperty("IsPlayable", "false")
                 xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
 
-            # Linebreak
-            self.add_line_break()
 
             # Queue
+            self.add_heading(ADDON.getLocalizedString(30201), True)
             for item in queue[1]:
                 li = xbmcgui.ListItem(item["artist"] + " - " + item["song"], iconImage='DefaultAudio.png')
                 li.setProperty("IsPlayable", "false")
                 xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
 
-            # Linebreak
-            self.add_line_break()
 
             # History
+            self.add_heading(ADDON.getLocalizedString(30202), True)
             for item in queue[2]:
                 li = xbmcgui.ListItem(item["artist"] + " - " + item["song"], iconImage='DefaultAudio.png')
                 li.setProperty("IsPlayable", "false")
@@ -131,7 +135,7 @@ class Main:
 
             # Add items
             url = 'http://no.scenemusic.net:9000/necta.m3u'
-            li = xbmcgui.ListItem('DAMN!', iconImage='DefaultAudio.png')
+            li = xbmcgui.ListItem(ADDON.getLocalizedString(30199), iconImage='DefaultAudio.png')
 
 
             xbmcplugin.addDirectoryItem(handle=HANDLE, url=url, listitem=li, isFolder=False)
@@ -176,23 +180,28 @@ class Main:
 
         # Read queue
 
-        for entry in dom.getElementsByTagName('queue'):
+        for entry in dom.getElementsByTagName('queue')[0].getElementsByTagName('entry'):
             artist = entry.getElementsByTagName('artist')[0].firstChild.nodeValue
             song = entry.getElementsByTagName('song')[0].firstChild.nodeValue
             queue.append({"artist": artist, "song": song})
 
         # Read history
 
-        for entry in dom.getElementsByTagName('history')[0]:
-            artist = '' #entry.childNodes[0].nodeValue
-            song = '' # entry.getElementsByTagName('song')[0].firstChild.nodeValue
+        for entry in dom.getElementsByTagName('history')[0].getElementsByTagName('entry'):
+            artist = entry.getElementsByTagName('artist')[0].firstChild.nodeValue
+            song = entry.getElementsByTagName('song')[0].firstChild.nodeValue
             history.append({"artist": artist, "song": song})
 
         return [current, queue, history]
 
-    def add_line_break(self):
+    def add_heading(self, title, linebreak=False):
         # Linebreak
-        li = xbmcgui.ListItem("===========", iconImage='DefaultAudio.png')
+        if linebreak:
+            li = xbmcgui.ListItem('', iconImage='DefaultAudio.png')
+            li.setProperty("IsPlayable", "false")
+            xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
+
+        li = xbmcgui.ListItem(label="[COLOR FF007EFF]" + title + "[/COLOR]", iconImage='DefaultAudio.png')
         li.setProperty("IsPlayable", "false")
         xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
 

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist>
+
+ <now>
+  <entry request_time="">
+   
+   <song id="" length=""></song>
+   <requester flag=""></requester>
+   <playstart></playstart>
+  </entry>
+
+ </now>
+
+ <queue>
+  <entry request_time="Wed, 16 Apr 2014 23:54:43 +0200">
+   <artist id="1526" flag="nl">Reyn Ouwehand</artist>
+   <song id="34479" length="4:28">Easy Goin&#39;</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Thu, 17 Apr 2014 00:00:22 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 02:11:26 +0200">
+   <artist id="410" flag="de">Emax [de]</artist>
+   <song id="17830" length="4:18">Darksun&#39;s no. 3</song>
+   <requester flag="CA">HappyDude</requester>
+   <playstart>Thu, 17 Apr 2014 00:04:50 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 02:34:16 +0200">
+   <artist id="1430" flag="gb">KEiTO</artist>
+   <song id="32148" length="3:29">Born &amp; Raised (Falling Down Reprise)</song>
+   <requester flag="nectaflag">crni_gmc</requester>
+   <playstart>Thu, 17 Apr 2014 00:09:08 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 06:11:21 +0200">
+   <artist id="1575" flag="us">Virt</artist>
+   <song id="40169" length="4:28">Stitch-n-Bitch</song>
+   <requester flag="de">Arne</requester>
+   <playstart>Thu, 17 Apr 2014 06:23:36 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 06:55:37 +0200">
+   <artist id="613" flag="de">KB</artist>
+   <song id="3776" length="4:31">2nd Reality part 3</song>
+   <requester flag="fi">brm_</requester>
+   <playstart>Thu, 17 Apr 2014 07:12:20 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 08:37:46 +0200">
+   <artist id="2869" flag="">Hiryu</artist>
+   <song id="19139" length="1:01">Testdrive shitmix</song>
+   <requester flag="fi">G_Signal</requester>
+   <playstart>Thu, 17 Apr 2014 08:59:00 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 08:49:36 +0200">
+   <artist id="447" flag="se">Firefox</artist><artist id="1225" flag="se">Tip</artist>
+   <song id="6986" length="5:34">A Final Hyperbase - Enigma (aka musiklinjen)</song>
+   <requester flag="fi">Susanna</requester>
+   <playstart>Thu, 17 Apr 2014 09:11:51 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 09:27:34 +0200">
+   <artist id="2932" flag="no">Jerry</artist>
+   <song id="36380" length="1:34">No More Marlboros</song>
+   <requester flag="ua">NerdN</requester>
+   <playstart>Thu, 17 Apr 2014 09:55:23 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 09:35:13 +0200">
+   <artist id="332" flag="fi">Dizzy</artist>
+   <song id="1783" length="2:48">Suomalainen Kaupunki</song>
+   <requester flag="se">Spiral</requester>
+   <playstart>Thu, 17 Apr 2014 10:04:36 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 10:00:07 +0200">
+   <artist id="4573" flag="ru">NightRadio</artist>
+   <song id="31178" length="4:08">8bit Tales</song>
+   <requester flag="fi">Galancy</requester>
+   <playstart>Thu, 17 Apr 2014 10:32:18 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 10:17:10 +0200">
+   <artist id="970" flag="se">Quazar</artist>
+   <song id="5894" length="2:20">Funky Stars (Hybrid Song)</song>
+   <requester flag="ua">phlubby_gnome</requester>
+   <playstart>Thu, 17 Apr 2014 10:53:29 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 10:23:42 +0200">
+   <artist id="1135" flag="">St</artist>
+   <song id="6723" length="6:00">Northlights</song>
+   <requester flag="fi">serpent</requester>
+   <playstart>Thu, 17 Apr 2014 11:02:21 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 10:39:53 +0200">
+   <artist id="579" flag="de">Jester</artist>
+   <song id="19666" length="3:58">Rage is Relentless</song>
+   <requester flag="cz">Robot2037</requester>
+   <playstart>Thu, 17 Apr 2014 11:24:32 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 12:08:46 +0200">
+   <artist id="173" flag="us">C.C. Catch</artist>
+   <song id="28295" length="2:27">[Xixit] Sacred Grounds</song>
+   <requester flag="de">Shinobi</requester>
+   <playstart>Thu, 17 Apr 2014 12:57:23 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 12:11:14 +0200">
+   <artist id="1688" flag="cz">Danger</artist>
+   <song id="28352" length="1:42">Sunrise Strumming (2009)</song>
+   <requester flag="eu">Koekenbakker</requester>
+   <playstart>Thu, 17 Apr 2014 13:02:18 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 12:34:10 +0200">
+   <artist id="4154" flag="us">Mazedude</artist>
+   <song id="35945" length="3:48">Myst Shrooms</song>
+   <requester flag="FR">Yohabro</requester>
+   <playstart>Thu, 17 Apr 2014 13:26:56 +0200</playstart>
+  </entry>
+<entry request_time="Thu, 17 Apr 2014 13:14:23 +0200">
+   <artist id="5447" flag="gb">James Pimentel-Pinto</artist>
+   <song id="40161" length="2:06">AmigaNuts Power</song>
+   <requester flag="fi">franz_koopa</requester>
+   <playstart>Thu, 17 Apr 2014 14:10:57 +0200</playstart>
+  </entry>
+
+ </queue>
+
+ <history>
+  <entry request_time="Wed, 16 Apr 2014 23:51:35 +0200">
+   <artist id="3365" flag="de">Payne</artist>
+   <song id="22608" length="3:45">Dimension 2012</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:52:35 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:49:30 +0200">
+   <artist id="3185" flag="se">Mempheria</artist>
+   <song id="21525" length="2:23">Vinter Moln Loader</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:50:31 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:47:26 +0200">
+   <artist id="2804" flag="no">GRG</artist>
+   <song id="35355" length="2:03">The Curse</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:48:26 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:43:07 +0200">
+   <artist id="1015" flag="DE">Ripguy</artist>
+   <song id="9754" length="2:47">The Real Axel F.</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:44:07 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:41:02 +0200">
+   <artist id="208" flag="fr">Chrylian</artist>
+   <song id="1162" length="4:13">Slap it</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:42:03 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:38:59 +0200">
+   <artist id="631" flag="nl">KoM&#39;AH</artist>
+   <song id="34062" length="7:23">Upside Downtown</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:39:59 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:37:31 +0200">
+   <artist id="2084" flag="gb">MSG</artist>
+   <song id="21954" length="2:58">Chuchu rocket 0b</song>
+   <requester flag="pirate">br4inlock</requester>
+   <playstart>Wed, 16 Apr 2014 23:37:54 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:35:54 +0200">
+   <artist id="970" flag="se">Quazar</artist>
+   <song id="26929" length="5:05">The Melody Engine</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:36:54 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:33:50 +0200">
+   <artist id="4114" flag="fr">xtrium</artist>
+   <song id="28720" length="2:20">Breakpoint is Indestructable</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:34:50 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:31:46 +0200">
+   <artist id="3988" flag="it">STiLE</artist>
+   <song id="27523" length="3:19">Blink</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:32:46 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:29:41 +0200">
+   <artist id="1349" flag="de">DaXX</artist>
+   <song id="7541" length="8:32">Lotus Turbo Challenge 3 [Breathless - remix]</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:30:41 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:27:40 +0200">
+   <artist id="2277" flag="pl">Bartman</artist>
+   <song id="14633" length="3:50">Lasermania</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:28:40 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:25:39 +0200">
+   <artist id="292" flag="gb">David Whittaker</artist>
+   <song id="1503" length="1:46">Shadow of the Beast - Title</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:26:39 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:23:38 +0200">
+   <artist id="1335" flag="pl">Chaser</artist>
+   <song id="35831" length="4:32">Maksullaby</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:24:38 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:21:37 +0200">
+   <artist id="1155" flag="gb">Subi</artist>
+   <song id="38438" length="2:08">Omega</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:22:37 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:19:32 +0200">
+   <artist id="2981" flag="">K93</artist>
+   <song id="19901" length="3:29">Ice core of my mind</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:20:33 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:17:28 +0200">
+   <artist id="1991" flag="fr">Ultrasyd</artist>
+   <song id="31104" length="3:42">La Nuit</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:18:29 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:15:27 +0200">
+   <artist id="5033" flag="es">Isvenger</artist>
+   <song id="36452" length="3:24">Highscore Theme</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:16:28 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:13:23 +0200">
+   <artist id="1863" flag="de">DQ</artist>
+   <song id="17478" length="3:41">8-Bit Wonderland</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:14:24 +0200</playstart>
+  </entry>
+<entry request_time="Wed, 16 Apr 2014 23:11:22 +0200">
+   <artist id="3606" flag="fr">SNES</artist>
+   <song id="24594" length="1:56">Alpha</song>
+   <requester flag="">djrandom</requester>
+   <playstart>Wed, 16 Apr 2014 23:12:22 +0200</playstart>
+  </entry>
+
+ </history>
+
+</playlist>
