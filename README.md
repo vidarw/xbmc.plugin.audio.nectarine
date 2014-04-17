@@ -1,4 +1,4 @@
-xbmc.plugin.audio.nectarine
-===========================
+Nectarine Demoscene XBMC Plugin
+===============================
 
-Nectarine Demoscene Plugin
+Stream the best of demoscene music from Nectarine Demoscene Radio (www.scenemusic.net) directly from XBMC using this fan-made plugin.
