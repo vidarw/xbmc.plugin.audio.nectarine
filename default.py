@@ -94,7 +94,7 @@ class Main:
             # Currently Playing
             self.add_heading(ADDON.getLocalizedString(30200))
             for item in history[0]:
-                li = xbmcgui.ListItem(item["artist"] + " - " + item["song"], iconImage='DefaultAudio.png')
+                li = xbmcgui.ListItem(item["artist"] + " - " + item["song"])
                 li.setProperty("IsPlayable", "false")
                 xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
 
@@ -102,7 +102,7 @@ class Main:
             # Queue
             self.add_heading(ADDON.getLocalizedString(30201), True)
             for item in history[1]:
-                li = xbmcgui.ListItem(item["artist"] + " - " + item["song"], iconImage='DefaultAudio.png')
+                li = xbmcgui.ListItem(item["artist"] + " - " + item["song"])
                 li.setProperty("IsPlayable", "false")
                 xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
 
@@ -110,7 +110,7 @@ class Main:
             # History
             self.add_heading(ADDON.getLocalizedString(30202), True)
             for item in history[2]:
-                li = xbmcgui.ListItem(item["artist"] + " - " + item["song"], iconImage='DefaultAudio.png')
+                li = xbmcgui.ListItem(item["artist"] + " - " + item["song"])
                 li.setProperty("IsPlayable", "false")
                 xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
 
@@ -168,25 +168,27 @@ class Main:
         for entry in dom.getElementsByTagName('queue')[0].getElementsByTagName('entry'):
             artist = entry.getElementsByTagName('artist')[0].firstChild.nodeValue
             song = entry.getElementsByTagName('song')[0].firstChild.nodeValue
-            queue.append({"artist": artist, "song": song})
+            play_start = entry.getElementsByTagName('playstart')[0].firstChild.nodeValue
+            queue.append({"artist": artist, "song": song, "play_start": play_start})
 
         # Read history
 
         for entry in dom.getElementsByTagName('history')[0].getElementsByTagName('entry'):
             artist = entry.getElementsByTagName('artist')[0].firstChild.nodeValue
             song = entry.getElementsByTagName('song')[0].firstChild.nodeValue
-            history.append({"artist": artist, "song": song})
+            play_start = entry.getElementsByTagName('playstart')[0].firstChild.nodeValue
+            history.append({"artist": artist, "song": song, "play_start": play_start})
 
         return [current, queue, history]
 
     def add_heading(self, title, linebreak=False):
         # Linebreak
         if linebreak:
-            li = xbmcgui.ListItem('', iconImage='DefaultAudio.png')
+            li = xbmcgui.ListItem()
             li.setProperty("IsPlayable", "false")
             xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
 
-        li = xbmcgui.ListItem(label="[COLOR FF007EFF]" + title + "[/COLOR]", iconImage='DefaultAudio.png')
+        li = xbmcgui.ListItem(label="[COLOR FF007EFF]" + title + "[/COLOR]")
         li.setProperty("IsPlayable", "false")
         xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
 
