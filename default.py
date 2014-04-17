@@ -29,8 +29,6 @@ import os
 import sys
 import urllib
 import urlparse
-
-import xbmc
 import xbmcgui
 import xbmcplugin
 import xbmcaddon
