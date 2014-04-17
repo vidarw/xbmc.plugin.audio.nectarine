@@ -26,10 +26,7 @@
 
 
 import os
-import pickle
 import sys
-import re
-import string
 import urllib
 import urlparse
 
@@ -37,15 +34,9 @@ import xbmc
 import xbmcgui
 import xbmcplugin
 import xbmcaddon
-import time
 from xml.dom import minidom
 from httpcomm import HTTPComm
 from ConfigParser import SafeConfigParser
-import json
-from random import randrange
-from operator import itemgetter
-import Queue
-import threading
 
 # Import JSON - compatible with Python<v2.6
 try:
@@ -60,9 +51,6 @@ ARGS = urlparse.parse_qs(sys.argv[2][1:])
 BASE_URL = sys.argv[0]
 HANDLE = int(sys.argv[1])
 ADDON = xbmcaddon.Addon(id=pluginConfig.get('plugin', 'id'))
-STREAM_URL = 'https://www.scenemusic.net/demovibes/streams/'
-STREAM_URL_XML = 'https://www.scenemusic.net/demovibes/xml/streams/'
-QUEUE_URL_XML = 'https://www.scenemusic.net/demovibes/xml/queue/'
 
 
 class Main:
@@ -83,7 +71,6 @@ class Main:
             url = self.build_url({'mode': 'folder', 'foldername': 'streams'})
             li = xbmcgui.ListItem(ADDON.getLocalizedString(30100), iconImage='DefaultFolder.png')
             xbmcplugin.addDirectoryItem(handle=HANDLE, url=url, listitem=li, isFolder=True)
-            xbmcplugin.endOfDirectory(HANDLE)
 
             # Create queue directory
             url = self.build_url({'mode': 'folder', 'foldername': 'queue'})
@@ -104,11 +91,11 @@ class Main:
 
         elif self.mode[0] == 'folder' and self.name[0] == 'queue':
 
-            queue = self.get_queue()
+            history = self.get_history()
 
             # Currently Playing
             self.add_heading(ADDON.getLocalizedString(30200))
-            for item in queue[0]:
+            for item in history[0]:
                 li = xbmcgui.ListItem(item["artist"] + " - " + item["song"], iconImage='DefaultAudio.png')
                 li.setProperty("IsPlayable", "false")
                 xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
@@ -116,7 +103,7 @@ class Main:
 
             # Queue
             self.add_heading(ADDON.getLocalizedString(30201), True)
-            for item in queue[1]:
+            for item in history[1]:
                 li = xbmcgui.ListItem(item["artist"] + " - " + item["song"], iconImage='DefaultAudio.png')
                 li.setProperty("IsPlayable", "false")
                 xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
@@ -124,7 +111,7 @@ class Main:
 
             # History
             self.add_heading(ADDON.getLocalizedString(30202), True)
-            for item in queue[2]:
+            for item in history[2]:
                 li = xbmcgui.ListItem(item["artist"] + " - " + item["song"], iconImage='DefaultAudio.png')
                 li.setProperty("IsPlayable", "false")
                 xbmcplugin.addDirectoryItem(handle=HANDLE, url="nnn", listitem=li, isFolder=False)
@@ -147,7 +134,7 @@ class Main:
 
     def get_streams(self):
         streams = []
-        xml = self.curl.request(STREAM_URL_XML, 'get')
+        xml = self.curl.request(pluginConfig.get('urls', 'stream_xml'), 'get')
         dom = minidom.parseString(xml)
 
         for node in dom.getElementsByTagName('stream'):
@@ -163,12 +150,12 @@ class Main:
         streams = sorted(streams, key=lambda d: (d['name'][:6].lower(), -d['bitrate'])) #itemgetter('bitrate')
         return streams
 
-    def get_queue(self):
+    def get_history(self):
         current = []
         queue = []
         history = []
 
-        xml = self.curl.request(QUEUE_URL_XML, 'get')
+        xml = self.curl.request(pluginConfig.get('urls', 'history_xml'), 'get')
         dom = minidom.parseString(xml)
 
         # Currently Playing
