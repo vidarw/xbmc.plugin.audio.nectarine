@@ -13,9 +13,8 @@
 		<platform>all</platform>
 		<language>en</language>
 		<license>BSD</license>
-		<forum>n/a</forum>
-    		<website>n/a</website>
-		<source>n/a</source>
+    		<website>https://github.com/vidarw/xbmc.plugin.audio.nectarine</website>
+		<source>https://github.com/vidarw/xbmc.plugin.audio.nectarine.git</source>
    		<summary lang="en">Nectarine Demoscene Radio</summary>
 		<description lang="en">
 			Stream the best of demoscene music from Nectarine Demoscene Radio (www.scenemusic.net) directly from XBMC using this fan-made plugin.
