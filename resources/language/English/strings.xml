@@ -2,7 +2,7 @@
 <strings>
 	<!-- The strings 30000 to 30999 is reserved for plug-in parameters -->
 	<string id="30100">Streams</string>
-    <string id="30101">Queue</string>
+    <string id="30101">History</string>
     <string id="30199">Something went wrong. Try this stream :)</string>
 
     <string id="30200">Currently playing</string>
