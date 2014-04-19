@@ -36,12 +36,6 @@ from xml.dom import minidom
 from httpcomm import HTTPComm
 from ConfigParser import SafeConfigParser
 
-# Import JSON - compatible with Python<v2.6
-try:
-    import json
-except ImportError:
-    import simplejson as json
-
 pluginConfig = SafeConfigParser()
 pluginConfig.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 
