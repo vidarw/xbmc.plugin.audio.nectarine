@@ -12,7 +12,7 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<language>en</language>
-		<license>BSD</license>
+		<license>MIT</license>
     		<website>https://github.com/vidarw/xbmc.plugin.audio.nectarine</website>
 		<source>https://github.com/vidarw/xbmc.plugin.audio.nectarine.git</source>
    		<summary lang="en">Nectarine Demoscene Radio</summary>
