@@ -42,7 +42,8 @@ pluginConfig.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 ARGS = urlparse.parse_qs(sys.argv[2][1:])
 BASE_URL = sys.argv[0]
 HANDLE = int(sys.argv[1])
-ADDON = xbmcaddon.Addon(id=pluginConfig.get('plugin', 'id'))
+ADDON_ID = pluginConfig.get('plugin', 'id')
+ADDON = xbmcaddon.Addon(ADDON_ID)
 
 
 class Main:
@@ -72,9 +73,10 @@ class Main:
 
         elif self.mode[0] == 'folder' and self.name[0] == 'streams':
 
+            thumbnailImage = 'special://home/addons/%s/icon.png' % ADDON_ID
             streams = self.get_streams()
             for stream in streams:
-                li = xbmcgui.ListItem(stream['name'], iconImage='DefaultAudio.png')
+                li = xbmcgui.ListItem(stream['name'], iconImage='DefaultAudio.png', thumbnailImage=thumbnailImage)
                 li.setInfo(type="Music", infoLabels={"Size": stream['bitrate'] * 1024})
                 li.setProperty("IsPlayable", "true")
                 xbmcplugin.addDirectoryItem(handle=HANDLE, url=stream['url'], listitem=li, isFolder=False)
