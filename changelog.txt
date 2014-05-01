@@ -2,10 +2,10 @@
 * Fixed/improved feature
 - Removed feature
 
-2014-05-04 v1.0.2
+2014-05-01 v1.0.2
 =================
 
-+ Added thumbnail image to streams to improve experience in favorites menu.
++ Added thumbnail to elements to improve experience in favorites and plugin.
   Thanks to robho (https://github.com/robho)
 
 2014-04-23 v1.0.1
